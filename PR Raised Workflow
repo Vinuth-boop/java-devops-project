@@ -1,0 +1,15 @@
+name: PR Raised Workflow
+
+on:
+  pull_request:
+    branches:
+      - dev
+      - preprod
+      - main
+
+jobs:
+  pr-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print PR Message
+        run: echo "PR raised"
